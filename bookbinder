@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd /usr/share/bookbinder/
+java -jar bookbinder3.0.jar
