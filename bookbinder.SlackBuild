@@ -37,15 +37,16 @@ cat $CWD/bookbinder.desktop > $PKG/usr/share/applications/bookbinder.desktop
 mkdir -p $PKG/usr/share/pixmaps
 cat $CWD/bookbinder.png > $PKG/usr/share/pixmaps/bookbinder.png
 
-mkdir -p $PKG/usr/local/bin
-cat $CWD/bookbinder > $PKG/usr/local/bin/bookbinder
-chmod oug+x $PKG/usr/local/bin/bookbinder
+mkdir -p $PKG/usr/bin
+cat $CWD/bookbinder > $PKG/usr/bin/bookbinder
+chmod oug+x $PKG/usr/bin/bookbinder
 
 mkdir -p $PKG/usr/share/$PRGNAM
 cp -a * $PKG/usr/share/$PRGNAM
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
+cat $CWD/doinst.sh > $PKG/install/doinst.sh
 
 cd $PKG
 /sbin/makepkg -l y -c n $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-tgz}
