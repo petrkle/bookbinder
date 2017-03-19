@@ -1,6 +1,6 @@
 help:
 	@echo "help     - this help"
-	@echo "dist     - create archive for upload to salckbuilds.org"
+	@echo "dist     - create archive for upload to slackbuilds.org"
 
 dist:
 	cd .. && tar jcf bookbinder/bookbinder.tar.bz2 bookbinder/bookbinder.info \
